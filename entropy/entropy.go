@@ -14,7 +14,7 @@ import (
 func Entropy(r io.Reader) (entropy float32, err error) {
 	var bytes [256]int
 	var readSize int
-	buf := make([]byte, 1)
+	buf := make([]byte, 2)
 
 	for {
 		n, err := r.Read(buf)
